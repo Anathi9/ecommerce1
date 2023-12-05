@@ -41,5 +41,12 @@ body{
 #imgg2{
    width: 725px;
 }
- 
- 
+input[type=text] {
+    margin-left:75%;
+    margin-bottom: 4%;
+}
+.card{
+    display:flex;
+    padding: 1%;
+
+}
