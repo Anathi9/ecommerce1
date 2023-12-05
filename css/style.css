@@ -6,9 +6,9 @@
     padding:0;
     box-sizing: border-box;
 }
-img{
+#logo{
     aspect-ratio: 1/1;
-    width:2rem;
+    width: 3rem;
 }
 ::-webkit-scrollbar{
     display: none;
@@ -22,11 +22,12 @@ h3 span {
 }
 footer{
     text-align: center;
-    background-color:lightcyan;
+    background-color:rgb(198, 194, 194)
+    
 }
 body{
 
-  background-color: #F5F5F5;
+  background-color:lightgray
 }
 #para1{
     margin:10%
@@ -34,3 +35,11 @@ body{
 .about-content{
     height: 600px;
 }
+.nav-item{
+    font-size: xx-large;
+}
+#imgg2{
+   width: 725px;
+}
+ 
+ 
