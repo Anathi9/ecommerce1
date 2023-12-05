@@ -59,47 +59,14 @@
         <h2>Our products</h2>
         <div class="container">
           <input type="text" id="search" placeholder="Enter your search" >
-          <button onclick="search()">Search</button>
-          <button onclick="sort()">sort</button>
+          <button type="button" onclick="search()">search</button>
+          <button type="button" id="sort"onclick="sortItems()">sort</button>
         </div>
-        <div class="row row-cols-1 row-cols-md-3 g-4">
-          <div class="col">
-            <div class="card">
-              <img src="https://i.postimg.cc/tTKdgNbs/x-Meatballs-Ratatouille-Pasta-550x550-jpg-pagespeed-ic-o9-Ca-Ezb186.jpg" class="card-img-top" alt="...">
-              <div class="card-body">
-                <h5 class="card-title">Card title</h5>
-                <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-              </div>
-            </div>
-          </div>
-          <div class="col">
-            <div class="card">
-              <img src="https://i.postimg.cc/5NYmsvR7/x-Beef-Bobotie-Yellow-Rice-768x768-jpg-pagespeed-ic-iewnw-Q-sk-R-1.webp" class="card-img-top" alt="...">
-              <div class="card-body">
-                <h5 class="card-title">Beef Kebab with baby Marrows and Butternut</h5>
-                <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-              </div>
-            </div>
-          </div>
-          <div class="col">
-            <div class="card">
-              <img src="https://i.postimg.cc/4xQcgTnH/beef.webp" class="card-img-top" alt="...">
-              <div class="card-body">
-                <h5 class="card-title">Beef Kebab with baby Marrows and Butternut</h5>
-                <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content.</p>
-              </div>
-            </div>
-          </div>
-          <div class="col">
-            <div class="card">
-              <img src="https://i.postimg.cc/fy5bPM8M/x-Beef-Goulash-Pumpkin-Spinach-550x550-jpg-pagespeed-ic-pt-EEfk0-Hv-S.webp" class="card-img-top" alt="...">
-              <div class="card-body">
-                <h5 class="card-title">Card title</h5>
-                <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-              </div>
-            </div>
-          </div>
+        
+        <div class="data-products d-flex" data-products>
+
         </div>
+        
 
       </main>
      
@@ -123,7 +90,7 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous">
     </script>
-    <script src="./script/Code.js"></script>
+    <script src="../script/Product.js"></script>
 
 </body>
 
