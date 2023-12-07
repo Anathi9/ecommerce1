@@ -41,11 +41,19 @@ body{
 #imgg2{
    width: 725px;
 }
-input[type=text] {
+/* input[type=text] {
   margin-left: 79%;
   
-}
+} */
 .card{
     width: 18rem;
     margin: 2%;
+   
+}
+#data-search{
+margin-left: 79%;
+}
+table{
+    text-align: center;
+    margin:2px;
 }

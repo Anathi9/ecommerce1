@@ -57,28 +57,19 @@
 
     <main>
         <h1>Checkout</h1>
-        <div class="row">
-            <div class="col">
-              <input type="text" class="form-control" checkout required>
-            </div>
-          <div class="col">
-            <button class="btn btn-success" checkout-sort>sort</button>
-            <div class="row">
-<table>
-    <thead>
-        <th>name</th>
-        <th>price</th>
-        <th>img</th>
-    </thead>
-    <tbody>
-
-    </tbody>
-</table>
-            </div>
-
-          </div>
-        </div>
-
+        <table class="table" data-product>
+            <thead>
+              <tr>
+                <th>Name</th>
+                <th>Price</th>
+                <th>Quantity</th>
+             
+              </tr>
+            </thead>
+            <tbody id="table">
+              
+            </tbody>
+          </table>   
     </main>
     
 
@@ -102,6 +93,7 @@
         integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous">
     </script>
     <script src="../script/Code.js"></script>
+    <script src="../script/Checkout.js"></script>
 
 </body>
 
