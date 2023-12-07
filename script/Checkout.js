@@ -1,26 +1,38 @@
 let tableContent = document.querySelector("#table")
-let tbody = JSON.parse(localStorage.getItem('cart'))
+let data = JSON.parse(localStorage.getItem('shoppingCart'))
+
 //create function//
 function displayProducts() {
     tableContent.innerHTML = "" ;
     let sum = 0
-    if (tbody) {
-        tbody.forEach((buy, i)=>{
-            tableContent.innerHTML +=
-            `<tr>
-            <th>${buy.name}</th>
-            <td>${buy.price}</td>
-            <td><input type='number'value='${buy}'<input></td>
-            </tr>`
-
-            sum += buy.price* 1
-        })
+    let uniqueData = Object.groupBy( data, item=> item.id)
+    for(let key in uniqueData) {
         tableContent.innerHTML +=
-      `<tr>
-      <th colspan = '3'>sum</th>
-      <td>${sum}</td>
-      </tr>`
-        
+            `<tr>
+            <th>${uniqueData[key][0].name}</th>
+            <td>R${uniqueData[key][0].price}</td>
+            <td>${uniqueData[key].length}</td>
+            <td>R${eval(`${uniqueData[key][0].price}*${uniqueData[key].length}`)}</td>
+            </tr>`
     }
+    
 }
 displayProducts()
+
+
+let btn = document.querySelector('.clear');
+btn.addEventListener('click', ()=>{
+    localStorage.removeItem('shoppingCart')
+    btn.innerHTML=""
+   
+
+})
+
+
+
+function popUp() {
+    alert('hey')
+
+}
+
+let button = document.querySelector('[data-btn]').addEventListener('click', popUp)

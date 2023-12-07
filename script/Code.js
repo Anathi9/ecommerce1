@@ -1,1 +1,1 @@
- document.getElementById("currentYear").textContent = new Date().getUTCFullYear()
+ let currentDate= document.getElementById("currentYear").textContent = new Date().getUTCFullYear();

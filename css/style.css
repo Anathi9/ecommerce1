@@ -6,6 +6,9 @@
     padding:0;
     box-sizing: border-box;
 }
+/* main{
+    height: 630px;
+} */
 #logo{
     aspect-ratio: 1/1;
     width: 3rem;
@@ -21,6 +24,7 @@ h3 span {
     padding:1%
 }
 footer{
+  
     text-align: center;
     background-color:rgb(198, 194, 194)
     
@@ -39,7 +43,7 @@ body{
     font-size: xx-large;
 }
 #imgg2{
-   width: 725px;
+   width: 720px;
 }
 /* input[type=text] {
   margin-left: 79%;
@@ -51,9 +55,27 @@ body{
    
 }
 #data-search{
-margin-left: 79%;
-}
+    margin-left: 40%;
+    }
 table{
     text-align: center;
-    margin:2px;
+    margin:3px;
+}
+.msg{
+   margin: 1%;
+}
+#foot{
+    height: 630px;
+}
+#pro{
+    height: 630px;
+}
+.about-content{
+    height: 630px;
+}
+#check{
+    height: 630px;
+}
+#Contacts{
+    height: 600px;
 }

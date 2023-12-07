@@ -45,6 +45,7 @@ let myProducts = JSON.parse(localStorage.getItem("products")) ? JSON.parse(local
 ]))
 
 let prodWrapper = document.querySelector("[data-products]");
+let cart = JSON.parse(localStorage.getItem('shoppingCart')) || []
 
 function displayproduct(data) {
 prodWrapper.innerHtml = ""
@@ -60,7 +61,7 @@ if (data.length) {
                 <p 
             
                 </p>
-                <a class="btn btn-primary" onclick="addToCart"(${JSON.stringify(prod)})">AddTocart</a>
+                <a class="btn btn-primary" onclick='addCart(${JSON.stringify(prod)})'>Add to cart</a>
             </div>
             </div>
         `
@@ -82,7 +83,7 @@ try {
         prodWrapper.innerHtml = ""
         search.forEach(
             item => {
-                prodWrapper.innerHTML = `.
+                prodWrapper.innerHTML = `
         
 
                 <div class="card" m-5 >
@@ -90,7 +91,7 @@ try {
         <div class="card-body">
             <h5 class="card-title">${item.name}</h5>
             <h4 class="card-tittle">R${item.price}</h4>
-            <button  class="btn btn-primary" >Add to cart</button>
+              <button  class="btn btn-primary" onclick='addCart(${JSON.stringify(prod)})'>Add to cart</button>
         </div>
         </div>`
             }
@@ -116,7 +117,7 @@ sortedItem.forEach(item => {
     <div class="card-body">
         <h5 class="card-title">${item.name}</h5>
         <h4 class="card-tittle">R${item.price}</h4>
-        <button  class="btn btn-primary" onclick="addToCart(${JSON.stringify(item)})">Add to cart</button>
+        <button  class="btn btn-primary" onclick='addCart(${JSON.stringify(prod)})'>Add to cart</button>
     </div>
     </div>
     `
@@ -125,12 +126,13 @@ sortedItem.forEach(item => {
 });
 
  
-let cart = []
+
 function addCart(product) {
-    cart.push(product);
-localStorage.setItem("product", JSON.stringify(cart));
+    if(product) {
+        cart.push(product);
+        localStorage.setItem("shoppingCart", JSON.stringify(cart));
+    }
 }
- addCart()
 
 
 
