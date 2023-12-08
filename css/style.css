@@ -39,8 +39,11 @@ body{
 .about-content{
     height: 600px;
 }
-.nav-item{
-    font-size: xx-large;
+.nav-item:hover{
+    background-color: rgba(106, 106, 141, 0.518);
+   
+    
+    
 }
 #imgg2{
    width: 720px;
@@ -52,15 +55,13 @@ body{
 .card{
     width: 18rem;
     margin: 2%;
+    text-align: center;
    
 }
 #data-search{
     margin-left: 40%;
     }
-table{
-    text-align: center;
-    margin:3px;
-}
+
 .msg{
    margin: 1%;
 }
@@ -75,7 +76,17 @@ table{
 }
 #check{
     height: 630px;
+
 }
 #Contacts{
     height: 600px;
+}
+#btnnn{
+background-color: RED;
+}
+#sort{
+    margin-left: -2%;
+}
+#addProducts{
+    margin-left: 93%;
 }

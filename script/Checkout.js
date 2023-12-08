@@ -24,15 +24,22 @@ let btn = document.querySelector('.clear');
 btn.addEventListener('click', ()=>{
     localStorage.removeItem('shoppingCart')
     btn.innerHTML=""
+    location.reload();
    
 
 })
 
+// let purchaseBtn =  document.querySelector('purchase')
+// purchaseBtn.addEventListener('click',()=> {
+//     alert('Thank you for your purchase!')
+// }
+// );
 
 
-function popUp() {
-    alert('hey')
 
-}
+// function popUp() {
+//     alert('hey')
 
-let button = document.querySelector('[data-btn]').addEventListener('click', popUp)
+// }
+
+// let button = document.querySelector('[data-btn]').addEventListener('click', popUp)

@@ -4,7 +4,7 @@ let myProducts = JSON.parse(localStorage.getItem("products")) ? JSON.parse(local
         id: 1,
         name: "Beef Bobotie with Yellow rice",
         price: 122,
-        img: ("https://i.postimg.cc/5NYmsvR7/x-Beef-Bobotie-Yellow-Rice-768x768-jpg-pagespeed-ic-iewnw-Q-sk-R-1.webp")
+        img: 'https://i.postimg.cc/5NYmsvR7/x-Beef-Bobotie-Yellow-Rice-768x768-jpg-pagespeed-ic-iewnw-Q-sk-R-1.webp'
     },
 
     {
@@ -30,7 +30,7 @@ let myProducts = JSON.parse(localStorage.getItem("products")) ? JSON.parse(local
 
     {
         id: 5,
-        name: "Beef kebab and carrots",
+        name: "Beef kebab and carrots lekker",
         price: 98,
         img: ("https://i.postimg.cc/4xQcgTnH/beef.webp")
 
@@ -40,7 +40,7 @@ let myProducts = JSON.parse(localStorage.getItem("products")) ? JSON.parse(local
         id: 6,
         name: "Vegetable Lasagne",
         price: 65,
-        img: ("https://i.postimg.cc/7ZB0ZsCZ/x-Vegetable-Lasagne-550x550-jpg-pagespeed-ic-9-Bl-XUTkws-T.webp")
+        img: 'https://i.postimg.cc/7ZB0ZsCZ/x-Vegetable-Lasagne-550x550-jpg-pagespeed-ic-9-Bl-XUTkws-T.webp'
     }
 ]))
 
@@ -48,7 +48,7 @@ let prodWrapper = document.querySelector("[data-products]");
 let cart = JSON.parse(localStorage.getItem('shoppingCart')) || []
 
 function displayproduct(data) {
-prodWrapper.innerHtml = ""
+prodWrapper.innerHTML = ""
 if (data.length) {
     data.forEach(prod => {
         console.log(prod)
@@ -67,7 +67,7 @@ if (data.length) {
         `
     })
 } else {
-    prodWrapper.innerHtml = "Product not found"
+    prodWrapper.innerHTML = "Product not found"
 }
 
 }
@@ -80,7 +80,7 @@ try {
         return prod.name.toLowerCase().includes(searchInput.value.toLowerCase())
     })
     if (search) {
-        prodWrapper.innerHtml = ""
+        prodWrapper.innerHTML = ""
         search.forEach(
             item => {
                 prodWrapper.innerHTML = `
@@ -91,7 +91,7 @@ try {
         <div class="card-body">
             <h5 class="card-title">${item.name}</h5>
             <h4 class="card-tittle">R${item.price}</h4>
-              <button  class="btn btn-primary" onclick='addCart(${JSON.stringify(prod)})'>Add to cart</button>
+              <button  class="btn btn-primary" onclick='addCart(${JSON.stringify(item)})'>Add to cart</button>
         </div>
         </div>`
             }
@@ -109,7 +109,7 @@ sorting.addEventListener('click', () => {
 let sortedItem = myProducts.sort((arg1, arg2) => {
     return arg1.price - arg2.price
 })
-prodWrapper.innerHtml = ""
+prodWrapper.innerHTML = ""
 sortedItem.forEach(item => {
     prodWrapper.innerHTML += `
     <div class="card" m-5 >
@@ -117,7 +117,7 @@ sortedItem.forEach(item => {
     <div class="card-body">
         <h5 class="card-title">${item.name}</h5>
         <h4 class="card-tittle">R${item.price}</h4>
-        <button  class="btn btn-primary" onclick='addCart(${JSON.stringify(prod)})'>Add to cart</button>
+        <button  class="btn btn-primary" onclick='addCart(${JSON.stringify(item)})'>Add to cart</button>
     </div>
     </div>
     `
