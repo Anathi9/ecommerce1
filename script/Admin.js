@@ -57,7 +57,7 @@ if (data.length) {
         <tr class ="td1">
             <th>${prod.name}</th>
             <td>R${prod.price}</td>
-             <td>${prod.img}</td>
+             <td><img src="${prod.img}" width="50px"></td>
            <td><button   class="btn btn-primary">Edit</button>
                <button id="btnnn" class=" btn btn-primary"> -DEL</button>
             </td>
@@ -66,7 +66,7 @@ if (data.length) {
         `
     })
 } else {
-    adminTable.innerHtml = "Product not found"
+    adminTable.innerHTML = "Product not found"
 }
 
 }
@@ -74,7 +74,7 @@ displayproduct(myProducts)
 
 
 
-//function for admin//
+// function for admin//
 // function adminProduct() {
 //    try{
 //     let myAdmin = JSON.parse(localStorage.getItem('myAdmin'))

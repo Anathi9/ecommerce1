@@ -117,7 +117,7 @@ sortedItem.forEach(item => {
     <div class="card-body">
         <h5 class="card-title">${item.name}</h5>
         <h4 class="card-tittle">R${item.price}</h4>
-        <button  class="btn btn-primary" onclick='addCart(${JSON.stringify(item)})'>Add to cart</button>
+        <button  class="btn btn-primary " onclick='addCart(${JSON.stringify(item)})'>Add to cart</button>
     </div>
     </div>
     `

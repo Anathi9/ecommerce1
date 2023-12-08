@@ -29,17 +29,6 @@ btn.addEventListener('click', ()=>{
 
 })
 
-// let purchaseBtn =  document.querySelector('purchase')
-// purchaseBtn.addEventListener('click',()=> {
-//     alert('Thank you for your purchase!')
-// }
-// );
 
 
 
-// function popUp() {
-//     alert('hey')
-
-// }
-
-// let button = document.querySelector('[data-btn]').addEventListener('click', popUp)
